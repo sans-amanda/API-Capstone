@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Have Your Cake</title>
+<!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+<!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<!-- GOOGLE PLACES -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNNIw6onSvZl9Z-3KqPMItMDezJoEUw8Q&libraries=places"></script>
+</head>
+
+
+<body>
+ 
+<header>
+Have Your Cake
+</header>
+
+<!-- START VIEW -->
+
+<div class="container" id="sectionstart">
+    <p id="startone">HAVE YOUR</p>
+    <p id="starttwo">CAKE</p>
+    <p id="startsub">& eat it, too.</p>
+    <p id="description">lorem ipsum short explaination</p>
+    <form id="formstart">
+        <input type="submit" value="YAAAS">
+    </form>
+</div>
+
+
+<!-- HOW VIEW -->
+
+<div class="container hidden" id="sectionhow">
+    <p class="how"><span class="strong">How</span> are you gunna get it?</p>
+    <form id="formhow">
+        <input type="radio" name="make" value="make">
+            <label for="make">Make It!</label>
+        <input type="radio" name="buy" value="buy">
+            <label for="buy">Buy It!</label>
+    </form>
+</div>
+
+<!-- MODAL WINDOW -->
+<div class="container hidden" id="zipmodalwindow">
+        <p class="how">Where you at?</p>
+        <form id="formzipcode">
+                Zipcode<br>
+                <input type="text" name="zipcode" value="zipcode or city"><br>
+            <input type="radio" name="make" value="make">
+                <label for="make">Make It!</label>
+        </form>
+    </div>
+
+
+<!-- WHAT VIEW -->
+
+<div class="container hidden" id="sectionwhat">
+    <p class="how"><span class="strong">What</span> are you gunna eat?</p>
+    <form id="formwhat">
+        <input type="radio" name="cake" value="cake">
+            <label for="cake">cake</label>       
+        <input type="radio" name="icecream" value="icecream">
+            <label for="icecream">ice cream</label>
+        <input type="radio" name="macaroons" value="macaroons">
+            <label for="macaroons">macaroons</label>
+        <input type="radio" name="cupcakes" value="cupcakes">
+            <label for="cupcakes">cupcakes</label>
+        <input type="radio" name="chocolate" value="chocolate">
+            <label for="chocolate">chocolate</label>
+        <input type="radio" name="random" value="random">
+            <label for="random">surprise me!</label>
+    </form>
+</div>
+
+
+<!-- LOADING VIEW -->
+<!-- NICE TO HAVE BUT WAIT TILL EVERYTHING ELSE IS DONE -->
+
+<!-- RECIPES VIEW -->
+
+<div class="container sectionrecipes hidden">
+    <h2>It's gunna be delicious!</h2>  
+
+</div>
+
+
+<!-- LOCATIONS VIEW -->
+
+<div class="container sectionlactions hidden">
+    <h2>Go get'em, tiger!</h2>    
+</div>
+
+
+
+<!--
+<div class="container hidden">
+    <h1>Have Your Cake</h1>
+
+        <form>
+          <input type="submit" value="Get a dog pic!">
+        </form>
+        <section class="results hidden">
+          <h2>Look at this dog!</h2>
+          <img class="results-img" alt="placeholder">
+        </section>
+</div>
+-->
+
+<footer>
+Change your mind?
+</footer>
+
+
+<!-- JAVASCRIPT -->
+    <script src="index.js"></script>
+</body>
+
+
+</html>
