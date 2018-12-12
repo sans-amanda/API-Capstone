@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="index.css">
 <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-<!-- GOOGLE PLACES -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNNIw6onSvZl9Z-3KqPMItMDezJoEUw8Q&libraries=places"></script>
 </head>
 
 
@@ -23,10 +21,9 @@ Have Your Cake
 <!-- START VIEW -->
 
 <div class="container" id="sectionstart">
-    <p id="startone">HAVE YOUR</p>
-    <p id="starttwo">CAKE</p>
-    <p id="startsub">& eat it, too.</p>
-    <p id="description">lorem ipsum short explaination</p>
+    <p id="startone">SW33T</p>
+    <p id="starttwo">TOOF</p>
+    <p id="description">Want to treat yo' self?<br>Have your cake & eat it, too.</p>
     <form id="formstart">
         <input type="submit" value="YAAAS">
     </form>
@@ -37,24 +34,25 @@ Have Your Cake
 
 <div class="container hidden" id="sectionhow">
     <p class="how"><span class="strong">How</span> are you gunna get it?</p>
-    <form id="formhow">
+    <form id="formhow" class="openmodal">
         <input type="radio" name="make" value="make">
             <label for="make">Make It!</label>
         <input type="radio" name="buy" value="buy">
-            <label for="buy">Buy It!</label>
+            <label for="buy">Get It!</label>
     </form>
 </div>
 
 <!-- MODAL WINDOW -->
 <div class="container hidden" id="zipmodalwindow">
+    <div id="modalcontent"></div>
         <p class="how">Where you at?</p>
         <form id="formzipcode">
-                Zipcode<br>
-                <input type="text" name="zipcode" value="zipcode or city"><br>
-            <input type="radio" name="make" value="make">
-                <label for="make">Make It!</label>
+            Zipcode<br>
+            <input type="text" name="location" value="zipcode"><br>
+            <input type="submit" name="Where I is">
         </form>
     </div>
+</div>
 
 
 <!-- WHAT VIEW -->
@@ -72,8 +70,8 @@ Have Your Cake
             <label for="cupcakes">cupcakes</label>
         <input type="radio" name="chocolate" value="chocolate">
             <label for="chocolate">chocolate</label>
-        <input type="radio" name="random" value="random">
-            <label for="random">surprise me!</label>
+        <input type="radio" name="sweets" value="sweets">
+            <label for="sweets">surprise me!</label>
     </form>
 </div>
 
@@ -83,33 +81,18 @@ Have Your Cake
 
 <!-- RECIPES VIEW -->
 
-<div class="container sectionrecipes hidden">
-    <h2>It's gunna be delicious!</h2>  
-
+<div id="sectionrecipes" class="container hidden">
+    <h2 id="recipesheader">It's gunna be delicious!</h2>  
 </div>
 
 
 <!-- LOCATIONS VIEW -->
 
-<div class="container sectionlactions hidden">
-    <h2>Go get'em, tiger!</h2>    
+<div id="sectionlocations" class="container hidden">
+    <h2 id="locationsheader">Go get'em, tiger!</h2>    
 </div>
 
 
-
-<!--
-<div class="container hidden">
-    <h1>Have Your Cake</h1>
-
-        <form>
-          <input type="submit" value="Get a dog pic!">
-        </form>
-        <section class="results hidden">
-          <h2>Look at this dog!</h2>
-          <img class="results-img" alt="placeholder">
-        </section>
-</div>
--->
 
 <footer>
 Change your mind?
