@@ -12,3 +12,6 @@ know that something is happeneing.
 Some addons they would like were distance from current location (not available on FourSquare API, that
 I can see) and ingredient lists. I don't think I'll be adding that in for the final project, but
 it might be something I want to work on later on the side.
+
+I need to add a .catch error to both the API functions, just in case they try searching a city
+instead of a zip, or there search returns no results.
