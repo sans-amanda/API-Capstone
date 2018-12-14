@@ -1,8 +1,8 @@
 'use strict';
 
 // VARIABLES
-let inputHowForm  = "test how to get dessert";
-let inputWhatForm = "test what dessert to get";
+let inputHowForm  = "test how";
+let inputWhatForm = "test what";
 let inputLocation = "19125";
 const keyRecipe = "0e24783ea0e0e61d97038231191d5131";
 const idRecipe = "190b4f83";
@@ -24,9 +24,9 @@ $("#formstart").submit(event => {
 
 // USER HOW SELECTION
 // hide how, show what WORKS
-$("#formhow").click(event => {
+$(".selecthow").click(event => {
     event.preventDefault();
-    inputHowForm = $("#formhow input[type=radio]:checked").val();
+    inputHowForm = event.target.id;
     console.log(inputHowForm);
     if (inputHowForm === "buy") {
         //console.log("check if === buy access");
@@ -43,7 +43,7 @@ $("#formhow").click(event => {
 function openModal() {
     //console.log("check openModal access");
     document.getElementById("modalwindow").style.display="block";
-    $("#submitlocation").click(event => {
+    $(".submitlocation").click(event => {
         event.preventDefault();
         inputLocation = $("#inputlocation").val();
         console.log(inputLocation);
@@ -54,9 +54,9 @@ function openModal() {
 
 // USER WHAT SELECTION
 // hide what, show recipes or locations
-$("#formwhat").click(event => {
+$(".selectwhat").click(event => {
     event.preventDefault();
-    inputWhatForm = $("#formwhat input[type=radio]:checked").val();
+    inputWhatForm = event.target.id;
     console.log(inputWhatForm);
     if (inputHowForm === "make") {
         getRecipes();
@@ -110,18 +110,29 @@ function displayRecipes(responseJson) {
 
 function displayLocations(responseJson) {
     //console.log("displayLocations accessed");
-    for (let i = 0; i < responseJson.response.venues[i].length; i++) {
-        console.log("check for loop works");
+    for (let i = 0; i < responseJson.response.venues.length; i++) {
+        console.log("check location loop works");
         $("#locationsheader").after(
             `<li><a href="${responseJson.response.venues[i]}">${responseJson.response.venues[i].name}</a></h3>
-            <img src="${responseJson.response.venues[i].categories.icon.prefix}/100x100.png">
             <p>${responseJson.response.venues[i].location.formattedAddress}</p></li>`)
         };
 }
 
 
 
-
+// RESTART
+$(".submitrestart").click(event => {
+    event.preventDefault();
+    $("#sectionstart").removeClass("hidden");
+    $("#sectionhow").addClass("hidden");
+    document.getElementById("modalwindow").style.display="none";
+    $("#sectionwhat").addClass("hidden");
+    $("#sectionrecipes").addClass("hidden");
+    $("#sectionlocations").addClass("hidden");
+    inputHowForm  = "test how";
+    inputWhatForm = "test what";
+    inputLocation = "19125";
+})
 
 
 
@@ -134,5 +145,7 @@ $(function() {
     console.log(inputWhatForm);
     console.log(inputLocation);
 });
+
+
 
 

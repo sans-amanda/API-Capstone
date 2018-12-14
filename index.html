@@ -35,22 +35,21 @@ Have Your Cake
 <div class="container hidden" id="sectionhow">
     <p class="how"><span class="strong">How</span> are you gunna get it?</p>
     <form id="formhow" class="openmodal">
-        <input type="radio" name="make" value="make">
-            <label for="make">Make It!</label>
-        <input type="radio" name="buy" value="buy">
-            <label for="buy">Get It!</label>
+        <input class="selecthow" id="make" type="button" name="make" value="make">
+        <input class="selecthow" id="buy" type="button" name="buy" value="buy">
     </form>
 </div>
 
 <!-- MODAL WINDOW -->
 <div class="container hidden w3-modal" id="modalwindow">
-    <div id="modalcontent"></div>
+    <div id="modalcontent">
         <p class="how modal-content">Where you at?</p>
         <form id="formzipcode">
-            City or Zipcode<br>
-            <input type="text" id="inputlocation" name="location" value="City or Zip"><br>
-            <input type="submit" id="submitlocation" name="Where I is">
+            Zipcode<br>
+            <input type="text" id="inputlocation" name="location" value="Enter a Zipcode" required ><br>
+            <input type="submit" class="submitlocation" name="Where I is">
         </form>
+        <input type="submit" class="submitrestart" value="Nevermind">
     </div>
 </div>
 
@@ -60,18 +59,12 @@ Have Your Cake
 <div class="container hidden" id="sectionwhat">
     <p class="how"><span class="strong">What</span> are you gunna eat?</p>
     <form id="formwhat">
-        <input type="radio" name="cake" value="cake">
-            <label for="cake">cake</label>       
-        <input type="radio" name="icecream" value="icecream">
-            <label for="icecream">ice cream</label>
-        <input type="radio" name="macaroons" value="macaroons">
-            <label for="macaroons">macaroons</label>
-        <input type="radio" name="cupcakes" value="cupcakes">
-            <label for="cupcakes">cupcakes</label>
-        <input type="radio" name="chocolate" value="chocolate">
-            <label for="chocolate">chocolate</label>
-        <input type="radio" name="sweets" value="sweets">
-            <label for="sweets">surprise me!</label>
+        <input class="selectwhat" type="button" id="cake" value="cake">
+        <input class="selectwhat" type="button" id="icecream" value="ice cream">
+        <input class="selectwhat" type="button" id="cookies" value="cookies">
+        <input class="selectwhat" type="button" id="macaroons" value="macaroons">
+        <input class="selectwhat" type="button" id="milkshake" value="milkshake">
+        <input class="selectwhat" type="button" id="dessert" value="surprise me!">
     </form>
 </div>
 
@@ -95,7 +88,7 @@ Have Your Cake
 
 
 <footer>
-Change your mind?
+    <input type="submit" class="submitrestart" value="Want Something Different?">
 </footer>
 
 
